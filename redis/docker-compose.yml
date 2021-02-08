@@ -1,0 +1,13 @@
+version: "3.8"
+      
+services:
+  redis:
+    container_name: redis
+    hostname: redis
+    build: .
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data:/data
+    env_file:
+      - ./.env
