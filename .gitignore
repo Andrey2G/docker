@@ -1,1 +1,4 @@
 /redis/data/*
+/mysql/5.7/data/*
+/mysql/8.0/data/*
+settings.json

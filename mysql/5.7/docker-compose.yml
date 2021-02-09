@@ -1,0 +1,17 @@
+version: "3.8"
+      
+services:
+  mysql:
+    image: mysql:5.7
+    container_name: mysql57
+    hostname: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data:/var/lib/mysql
+    env_file:
+      - ./.env
+    command: 
+         - --group_concat_max_len=1000000
+         - --character-set-server=utf8mb4
+         - --default-authentication-plugin=mysql_native_password
